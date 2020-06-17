@@ -1,3 +1,5 @@
+// Testing objects
+
 const empresa = {
     nome: 'Rocketseat',
     cor: 'Roxo',
@@ -9,7 +11,9 @@ const empresa = {
 }
 
 console.log(`A empresa ${empresa.nome} está localizada em ${empresa.endereco.rua}, ${empresa.endereco.numero}`);
+------------------------------------------------------------------------------------------------------------------------------------------------
 
+// Testing objects with arrays
 
 const usuario = {
     nome: 'Israel',
