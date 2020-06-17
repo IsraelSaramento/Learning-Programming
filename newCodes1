@@ -1,6 +1,7 @@
 // Calculadora IMC / BMI Calculator
 
 const nome = 'Israel';
+const idade = 32;
 const peso = 80;
 const altura = 1.74;
 const sexo = "Masculino";
@@ -8,10 +9,10 @@ const sexo = "Masculino";
 const imc = peso / (altura * altura);
 
 if (imc >= 30) {
-    console.log('Israel está acima do peso')
+    console.log(`${nome} está acima do peso`)
 } else {
     if (imc <= 29.9)
-        console.log('Israel não está acima do peso')
+        console.log(`${nome} não está acima do peso`)
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -19,18 +20,16 @@ if (imc >= 30) {
 
 const nome = 'Israel';
 const idade = 32;
+const sexo = 'M';
 const contribuicao = 9;
 
-if (contribuicao >= 35) {
-    if (idade + contribuicao >= 95) {
-        console.log('Israel pode ser aposentar')
-    } else {
-        if (idade + contribuicao <= 94) {
-            console.log('Israel não pode ser aposentar')
-        }
-    }
-} else {
-    console.log('Israel não pode ser aposentar')
-}
+const calculoContribuicao = idade + contribuicao;
 
-console.log(idade + contribuicao)
+const homemPodeAposentar = sexo == 'M' && contribuicao >= 35 && calculoContribuicao >= 95
+const mulherPodeAposentar = sexo == 'F' && contribuicao >= 30 && calculoContribuicao >= 85
+
+if(homemPodeAposentar || mulherPodeAposentar) {
+    console.log(`${nome}, você pode aposentar.` );
+} else {
+    console.log(`${nome}, você não pode se aposentar.`);
+}
