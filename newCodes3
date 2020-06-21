@@ -1,0 +1,24 @@
+const usuarios = [
+    {nome: 'Israel', tecnologias:['Javascritp', 'CSS']},
+    {nome: 'Rael', tecnologias:['HTML', 'CSS']},
+    {nome: 'Ita', tecnologias:['Javascript', 'HTML']}
+]
+
+for(let usuario of usuarios) {
+    console.log(`${usuario.nome} trabalha com ${usuario.tecnologias.join(', ')}`)
+}
+
+function verHabilidades(usuario) {
+    for(tecnologia of usuario.tecnologias) {
+        if(tecnologia == 'CSS') return true
+    }
+    return false
+}
+
+for(let i = 0; i < usuarios.length; i++) {
+    const usuarioUsaCss = verHabilidades(usuarios[i])
+
+    if(usuarioUsaCss) {
+        console.log(`O Usuário ${usuarios[i].nome} trabalha com CSS`)
+    }
+}   
